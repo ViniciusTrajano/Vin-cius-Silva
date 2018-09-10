@@ -1,6 +1,7 @@
 t = []
 l = []
-pt = 0
+p = 0
+qt = 0
 qm = 0
 qcv = 0
 while True:
@@ -15,12 +16,13 @@ while True:
         t.append(n.lower())
 for i in l:
     if 'tigre' in i:
-        p = float(i[1])
+        p += float(i[1])
+        qt += 1
     elif ('cobra' and 'venezuela') in i:
         qcv += 1
     elif 'macaco' in i:
         qm += 1
-    
+pt = p/qt  
 print(qm)
-print(p)
+print('{:.2f}'.format(pt))
 print(qm)
